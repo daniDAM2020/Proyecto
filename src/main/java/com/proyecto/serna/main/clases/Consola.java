@@ -5,6 +5,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,6 +17,10 @@ public class Consola {
     @Column(unique = true, nullable = false)
 	private Integer id_consola;
 	private String nombre;
+	private int precio;
+    @ManyToOne()
+    @JoinColumn(name = "id_marca")
+	private Marca marca;
 
 	public Integer getId_consola() {
 		return id_consola;
@@ -30,6 +36,22 @@ public class Consola {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
+	}
+
+	public int getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(int precio) {
+		this.precio = precio;
+	}
+
+	public Marca getMarca() {
+		return marca;
+	}
+
+	public void setMarca(Marca marca) {
+		this.marca = marca;
 	}
 
 }
