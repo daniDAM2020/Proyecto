@@ -1,11 +1,16 @@
 package com.proyecto.serna.main.clases;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -21,6 +26,16 @@ public class Consola {
     @ManyToOne()
     @JoinColumn(name = "id_marca")
 	private Marca marca;
+    @ManyToMany(cascade = {
+            CascadeType.PERSIST,
+            CascadeType.MERGE
+    })
+    @JoinTable(
+            name = "consolas_juegos",
+            joinColumns = {@JoinColumn(name = "consola_id")},
+            inverseJoinColumns = {@JoinColumn(name = "juego_id")}
+    )
+    private List<Juego> juegos;
 
 	public Integer getId_consola() {
 		return id_consola;
@@ -52,6 +67,14 @@ public class Consola {
 
 	public void setMarca(Marca marca) {
 		this.marca = marca;
+	}
+
+	public List<Juego> getJuegos() {
+		return juegos;
+	}
+
+	public void setJuegos(List<Juego> juegos) {
+		this.juegos = juegos;
 	}
 
 }
