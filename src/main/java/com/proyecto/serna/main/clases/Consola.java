@@ -23,6 +23,7 @@ public class Consola {
 	private Integer id_consola;
 	private String nombre;
 	private int precio;
+	private String foto;
     @ManyToOne()
     @JoinColumn(name = "id_marca")
 	private Marca marca;
@@ -75,6 +76,14 @@ public class Consola {
 
 	public void setJuegos(List<Juego> juegos) {
 		this.juegos = juegos;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 }

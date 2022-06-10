@@ -21,6 +21,7 @@ public class Marca {
 		private String nombre;
 		@OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)		
 		private List<Consola> consolas;
+		private String foto;
 		
 		public Integer getId_marca() {
 		return id_marca;
@@ -40,6 +41,12 @@ public class Marca {
 		}
 		public void setConsolas(List<Consola> consolas) {
 			this.consolas = consolas;
+		}
+		public String getFoto() {
+			return foto;
+		}
+		public void setFoto(String foto) {
+			this.foto = foto;
 		}
 		
 }

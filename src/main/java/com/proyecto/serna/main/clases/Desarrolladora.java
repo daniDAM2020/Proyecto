@@ -19,6 +19,7 @@ public class Desarrolladora {
 	@Column(unique = true, nullable = false)
 	private Integer id_desarrolladora;
 	private String nombre;
+	private String foto;
 	@OneToMany(mappedBy = "desarrolladora", cascade = CascadeType.ALL, orphanRemoval = true)		
 	private List<Juego> juegos;
 
@@ -44,6 +45,14 @@ public class Desarrolladora {
 
 	public void setJuegos(List<Juego> juegos) {
 		this.juegos = juegos;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
 	}
 
 }

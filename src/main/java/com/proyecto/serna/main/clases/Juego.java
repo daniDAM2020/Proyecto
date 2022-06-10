@@ -21,12 +21,14 @@ public class Juego {
 	private Integer id_juego;
 	
 	private String nombre;
+	private Integer precio;
+
 	@ManyToMany(mappedBy = "juegos")
 	private List<Consola> consolas;
     @ManyToOne()
     @JoinColumn(name = "id_desarrolladora")
 	private Desarrolladora desarrolladora;
-
+	private String foto;
 	public Integer getId_juego() {
 		return id_juego;
 	}
@@ -59,6 +61,22 @@ public class Juego {
 
 	public void setDesarrolladora(Desarrolladora desarrolladora) {
 		this.desarrolladora = desarrolladora;
+	}
+
+	public String getFoto() {
+		return foto;
+	}
+
+	public void setFoto(String foto) {
+		this.foto = foto;
+	}
+
+	public Integer getPrecio() {
+		return precio;
+	}
+
+	public void setPrecio(Integer precio) {
+		this.precio = precio;
 	}
 
 
