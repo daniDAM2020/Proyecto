@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.proyecto.serna.main.clases.Juego;
 import com.proyecto.serna.main.dao.JuegoDao;
 
-@Service("autoServiceimplements")
+@Service("juegoServiceimplements")
 public class JuegoServiceImplement implements JuegoService {
 	@Autowired
 	private JuegoDao juegoDao;
