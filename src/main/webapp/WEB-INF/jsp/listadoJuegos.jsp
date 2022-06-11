@@ -28,9 +28,21 @@
 					<td>${juego.desarrolladora.nombre}</td>
 					<td>${juego.precio}</td>
 					<td><img src="${juego.foto}" width="200"></td>
+					<td>
+						<form method="get"  action="/editarJuego/${juego.id_juego}">
 					
-				
-				
+							<a href="http://localhost:8080/editarJuego/${juego.id_juego}"><input type="submit" value="Editar"></a>
+						</form>
+					</td>
+					<td>
+						<form method="post" action="/Borrar">
+							<input type="hidden" name="id_juego" value="${juego.id_juego}">
+							<input type="submit" value="Borrar">
+						</form>
+					</td>
+
+
+
 				</tr>
 				</c:forEach>
 				

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
@@ -52,5 +53,19 @@ public class JuegoController {
 		return "redirect:/listadoJuegos";
 		
 	}	
+	@GetMapping(value = "/editarJuego/{id_juego}")
+	public String editarJuegoget(@PathVariable Integer id_juego, Map<String, Object> map) {
+		Juego juego = juegoService.findById(id_juego);
+		map.put("juego", juego);
+		map.put("listadoDesarrolladoras", desarrolladoraService.findAll());
+
+		return "editarJuego";
+	}
+	@PostMapping(value = "/editarJuego/{id_juego}")
+	public String editarJuegopost(Juego juego) {
+		juegoService.actualizar(juego);
+		return "redirect:/listadoJuegos";
+	}
+
 
 }
