@@ -66,6 +66,11 @@ public class JuegoController {
 		juegoService.actualizar(juego);
 		return "redirect:/listadoJuegos";
 	}
+	@GetMapping(value = "/eliminarJuego/{id_juego}")
+	public String eliminar(@PathVariable Integer id_juego) {
+		juegoService.eliminar(id_juego);
+		return "redirect:/listadoJuegos";
+	}
 
 
 }
