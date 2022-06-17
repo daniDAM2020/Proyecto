@@ -1,6 +1,9 @@
+
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <html>
 <head>
 <title>Consoles and Games</title>
@@ -562,7 +565,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
 						<a href="listadoJuegos" class="font-weight-bold font-italic">
-							<img src="images/logo2.png" alt=" " class="img-fluid">Tu
+							<img src="../images/logo2.png" alt=" " class="img-fluid">Tu
 							tienda de confianza
 						</a>
 					</h1>
@@ -574,7 +577,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div align="center" class="col-10 agileits_search">
 							<a href="listadoJuegos"><img width="300px" height="150px"
-								src="./images/logo.png"></img></a>
+								src="../images/logo.png"></img></a>
 						</div>
 						<!-- //search -->
 						<!-- cart details -->
@@ -622,8 +625,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="row">
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
-												<li><a href="insertarConsola">Inserccion</a></li>
-												<li><a href="listadoConsolas">Listado (Borrar y
+												<li><a href="http://localhost:8080/insertarConsola">Inserccion</a></li>
+												<li><a href="http://localhost:8080/listadoConsolas">Listado (Borrar y
 														Editar)</a></li></li>
 					</ul>
 				</div>
@@ -642,8 +645,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col-sm-6 multi-gd-img">
 						<ul class="multi-column-dropdown">
-							<li><a href="insertarJuego">Insertar Juego</a></li>
-							<li><a href="listadoJuegos">Listado (Borrar y Editar)</a></li>
+							<li><a href="http://localhost:8080/insertarJuego">Insertar Juego</a></li>
+							<li><a href="http://localhost:8080/listadoJuegos">Listado (Borrar y Editar)</a></li>
 						</ul>
 					</div>
 				</div>
@@ -660,8 +663,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col-sm-6 multi-gd-img">
 						<ul class="multi-column-dropdown">
-							<li><a href="insertarMarca">Insertar Marca</a></li>
-							<li><a href="listadoMarcas">Listado (Borrar y Editar)</a></li>
+							<li><a href="http://localhost:8080/insertarMarca">Insertar Marca</a></li>
+							<li><a href="http://localhost:8080/listadoMarcas">Listado (Borrar y Editar)</a></li>
 						</ul>
 					</div>
 				</div>
@@ -678,9 +681,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row">
 					<div class="col-sm-6 multi-gd-img">
 						<ul class="multi-column-dropdown">
-							<li><a href="insertarDesarrolladora">Insertar
+							<li><a href="http://localhost:8080/insertarDesarrolladora">Insertar
 									Desarrolladora</a></li>
-							<li><a href="listadoDesarrolladoras">Listado (Borrar y
+							<li><a href="http://localhost:8080/listadoDesarrolladoras">Listado (Borrar y
 									Editar)</a></li>
 						</ul>
 					</div>
@@ -688,7 +691,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			</div>
 		</div></li>
 	<li class="nav-item mr-lg-2 mb-lg-0 mb-2"><a class="nav-link"
-		href="proximamente.php"><strong>Proximamente</strong></a></li>
+		href="http://localhost:8080/proximamente"><strong>Proximamente</strong></a></li>
 
 
 	</ul>
@@ -750,7 +753,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<h3 class="font-weight-bold pt-2 pb-lg-5 pb-4">
 								Proximos <span>Lanzamientos</span>
 							</h3>
-							<a class="button2" href="proximamente">Pulsa para ver los
+							<a class="button2" href="http://localhost:8080/proximamente">Pulsa para ver los
 								proximos lanzamientos </a>
 						</div>
 					</div>
@@ -789,9 +792,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
-				<br>
-				<br>
+				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Editar
+					Desarrolladoras</strong><br> <br> <br>
 
 				<!-- //tittle heading -->
 				<div class="row">
@@ -800,284 +802,263 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="wrapper">
 							<!-- first section -->
 							<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
-								<h3 class="heading-tittle text-center font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listado
-									Videojuegos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarJuego"><input class="button2" type="submit" value="Insertar un juego" style="font-size: 16px" /></a></h3></br>
+								<h3 class="heading-tittle text-center font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pulsa
+									el boton para editar</h3>
+								</br>
 								<div class="row">
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">
 											<div class="men-thumb-item text-center"></div>
-												<table>
-													<thead>
-														<tr>
-															<th style="font-size: 20px; text-align:right" >&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrolladora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
-														</tr>
-													</thead>
-													<tbody>
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-														<c:forEach var="juego" items="${listaJuegos}">
-														
-															<tr>
-															
-																<td style="font-size: 20px">${juego.nombre}</td>
-																<td style="font-size: 20px">${juego.desarrolladora.nombre}</td>
-																<td style="font-size: 20px">${juego.precio}</td>
-																<td ><img src="${juego.foto}" width="150"></td>
-																<td>
-																	<form method="get"
-																		action="/editarJuego/${juego.id_juego}">
-																		<a
-																			href="http://localhost:8080/editarJuego/${juego.id_juego}"><input class="button2"
-																			type="submit" value="Editar" style="font-size: 17px"></a>
-																	</form>
-																</td>
-																<td>
-																	<form method="get"
-																		action="/eliminarJuego/${juego.id_juego}">
-																		<a
-																			href="http://localhost:8080/borrarJuego/${juego.id_juego}"><input class="button2"
-																			type="submit" value="Borrar" style="font-size: 17px"></a>
-																	</form>
-																</td>
-															</tr>
-														</c:forEach>
-													</tbody>
-												</table>
+											<table>
+												 
+												<form:form modelAttribute="desarrolladora" method="post">
+	
+         										<h3>Nombre:</h3>
+         										<form:input class="form-control" style="font-size: 20px" type="text"  path="nombre" required="true" />
+
+  
 
 
-											</div>
+         											<h3>Foto:</h3>
+         											<form:input type="text" class="form-control" style="font-size: 20px" path="foto" required="true" />
+
+														<h3><input class="button2 form-control"  type="submit" value="Editar" style="font-size: 20px" /></h3></br>
+
+														<h3><a href="http://localhost:8080/listadoDesarrolladoras"><input class="button2 form-control"  type="text" value="Volver" style="font-size: 20px;text-align:center"  /></a></h3></br>
+
+
+
+												</form:form>
+
+
+
+											</table>
+
 										</div>
 									</div>
-
-
-									<!-- //first section -->
-									<!-- second section -->
-					
-		
-
-									<!-- //second section -->
-									<!-- third section -->
-									<div class="product-sec1 product-sec2 px-sm-5 px-3">
-										<img src="images/welovevideogames.jpg" width="500px" alt="">
-									</div>
-
-									<!-- //fourth section -->
 								</div>
-							</div>
-							<!-- //product left -->
 
-							<!-- product right -->
-		
 
-								<!-- //product right -->
+								<!-- //first section -->
+								<!-- second section -->
+
+
+
+								<!-- //second section -->
+								<!-- third section -->
+								<div class="product-sec1 product-sec2 px-sm-5 px-3">
+									<img src="../images/welovevideogames.jpg" width="500px" alt="">
+								</div>
+
+								<!-- //fourth section -->
 							</div>
 						</div>
+						<!-- //product left -->
+
+						<!-- product right -->
+
+
+						<!-- //product right -->
 					</div>
 				</div>
-				<!-- //top products -->
-
-				<!-- middle section -->
-				<div class="join-w3l1 py-sm-5 py-4">
-					<div class="container py-xl-4 py-lg-2">
-						<div class="row">
-							<div class="col-lg-6">
-								<div class="join-agile text-left p-4">
-									<div class="row">
-										<div class="col-sm-7 offer-name">
-											<h6>Las mejores consolas</h6>
-											<h4 class="mt-2 mb-3">Nuevas y proximamente de segunda
-												mano</h4>
-											<p>Rebajadas mas 20€ de descuento</p>
-										</div>
-										<div class="col-sm-5 offerimg-w3l">
-											<img src="images/nintendods.png" alt="" class="img-fluid">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-lg-6 mt-lg-0 mt-5">
-								<div class="join-agile text-left p-4">
-									<div class="row ">
-										<div class="col-sm-7 offer-name">
-											<h6>Los mejores videojuegos</h6>
-											<h4 class="mt-2 mb-3">Al mejor precio</h4>
-											<p>Envío gratis a partir de 40€</p>
-										</div>
-										<div class="col-sm-5 offerimg-w3l">
-											<img src="images/crashbandicootwarped.png" alt=""
-												class="img-fluid">
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- middle section -->
-
-				<!-- footer -->
-				<footer>
-					<div class="footer-top-first">
-						<div class="container py-md-5 py-sm-4 py-3">
-							<!-- footer first section -->
-							<h2 class="footer-top-head-w3l font-weight-bold mb-2">Videojuegos
-								:</h2>
-							<p class="footer-main mb-4">Si estas buscando videojuegos,
-								consolas, perifericos, mandos, cables etc. Entonces estas en la
-								tienda adecuada. En Consoles&Games estamos a la ultima con los
-								videojuegos, consolas, pero tampoco nos olvidamos de las
-								consolas más antiguas.</p>
-							<!-- //footer first section -->
-							<!-- footer second section -->
-							<div
-								class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
-								<div class="col-md-4 offer-footer">
-									<div class="row">
-										<div class="col-4 icon-fot">
-											<i class="fas fa-dolly"></i>
-										</div>
-										<div class="col-8 text-form-footer">
-											<h3>Envío Gratis</h3>
-											<p>En pedidos superiores a 40€</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 offer-footer my-md-0 my-4">
-									<div class="row">
-										<div class="col-4 icon-fot">
-											<i class="fas fa-shipping-fast"></i>
-										</div>
-										<div class="col-8 text-form-footer">
-											<h3>Envio Rápido</h3>
-											<p>A todo el mundo</p>
-										</div>
-									</div>
-								</div>
-								<div class="col-md-4 offer-footer">
-									<div class="row">
-										<div class="col-4 icon-fot">
-											<i class="far fa-thumbs-up"></i>
-										</div>
-										<div class="col-8 text-form-footer">
-											<h3>Los mejores</h3>
-											<p>productos</p>
-										</div>
-									</div>
-								</div>
-							</div>
-							<!-- //footer second section -->
-						</div>
-					</div>
-					<!-- footer third section -->
-					<div class="w3l-middlefooter-sec">
-						<div class="container py-md-5 py-sm-4 py-3">
-							<div class="row footer-info w3-agileits-info">
-								<!-- footer categories -->
-								<div class="col-md-3 col-sm-6 footer-grids">
-									<h3 class="text-white font-weight-bold mb-3">Listados</h3>
-									<ul>
-										<li class="mb-3"><a href="listadoJuegos">Listado de
-												Juegos </a></li>
-										<li class="mb-3"><a href="listadoMarcas">Listado de
-												Marcas</a></li>
-										<li class="mb-3"><a href="listadoDesarrolladoras">Listado
-												de Desarrolladoras</a></li>
-										<li class="mb-3"><a href="listadoConsolas">Listado de
-												Consolas</a></li>
-
-									</ul>
-								</div>
-								<!-- //footer categories -->
-								<!-- quick links -->
-								<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
-									<h3 class="text-white font-weight-bold mb-3">Proximos
-										Lanzamientos</h3>
-									<ul>
-										<li class="mb-3"><a href="proximamente">Proximos Juegos</a></li>
-									</ul>
-								</div>
-								<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
-									<h3 class="text-white font-weight-bold mb-3">Nuestro
-										contacto</h3>
-									<ul>
-										<li class="mb-3"><i class="fas fa-map-marker"></i>
-											Avenida Super Mario Bros /Zaragoza Nº34</li>
-										<li class="mb-3"><i class="fas fa-mobile"></i> 657 473
-											848</li>
-										<li class="mb-3"><i class="fas fa-phone"></i> 976 784 384
-										</li>
-										<li class="mb-3"><i class="fas fa-envelope-open"></i> <a
-											href="mailto:example@mail.com">
-												support@consolesandgames.com</a></li>
-										<li><i class="fas fa-envelope-open"></i> <a
-											href="mailto:example@mail.com">
-												support2@consolesandgames.com</a></li>
-									</ul>
-								</div>
-								<div
-									class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
-									<!-- newsletter -->
-									<h3 class="text-white font-weight-bold mb-3">Noticias</h3>
-									<p class="mb-3">Deja tu email para suscribirte a nuestro
-										boletin de noticias!</p>
-									<form action="addnoticias.php" method="post">
-										<div class="form-group">
-											<input type="email" class="form-control" placeholder="Email"
-												name="f_email" id="f_email" required=""> <input
-												type="submit" value="Go">
-										</div>
-									</form>
-									<!-- //newsletter -->
-									<!-- social icons -->
-									<div class="footer-grids  w3l-socialmk mt-3">
-										<h3 class="text-white font-weight-bold mb-3">Siguenos
-											en...</h3>
-										<div class="social">
-											<ul>
-												<li><a class="icon fb" href="http://facebook.com">
-														<i class="fab fa-facebook-f"></i>
-												</a></li>
-												<li><a class="icon tw" href="http://twitter.com"> <i
-														class="fab fa-twitter"></i>
-												</a></li>
-												<li><a class="icon gp" href="http://googleplus.com">
-														<i class="fab fa-google-plus-g"></i>
-												</a></li>
-											</ul>
-										</div>
-									</div>
-									<!-- //social icons -->
-								</div>
-							</div>
-							<!-- //quick links -->
-						</div>
-					</div>
-					<!-- //footer third section -->
-
-					<!-- footer fourth section -->
-
-					<!-- //brands -->
-					<!-- payment -->
-					<div class="sub-some child-momu mt-4">
-						<h5 class="font-weight-bold mb-3">Metodo de pago:</h5>
-						<ul>
-							<li><img src="images/pay2.png" alt=""></li>
-							<li><img src="images/pay5.png" alt=""></li>
-							<li><img src="images/pay1.png" alt=""></li>
-							<li><img src="images/pay4.png" alt=""></li>
-							<li><img src="images/pay6.png" alt=""></li>
-							<li><img src="images/pay3.png" alt=""></li>
-							<li><img src="images/pay7.png" alt=""></li>
-							<li><img src="images/pay8.png" alt=""></li>
-							<li><img src="images/pay9.png" alt=""></li>
-						</ul>
-					</div>
-					<!-- //payment -->
 		</div>
 	</div>
-	<!-- //footer fourth section (text) -->
+	<!-- //top products -->
+
+	<!-- middle section -->
+	<div class="join-w3l1 py-sm-5 py-4">
+		<div class="container py-xl-4 py-lg-2">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="join-agile text-left p-4">
+						<div class="row">
+							<div class="col-sm-7 offer-name">
+								<h6>Las mejores consolas</h6>
+								<h4 class="mt-2 mb-3">Nuevas y proximamente de segunda mano</h4>
+								<p>Rebajadas mas 20€ de descuento</p>
+							</div>
+							<div class="col-sm-5 offerimg-w3l">
+								<img src="../images/nintendods.png" alt="" class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-6 mt-lg-0 mt-5">
+					<div class="join-agile text-left p-4">
+						<div class="row ">
+							<div class="col-sm-7 offer-name">
+								<h6>Los mejores videojuegos</h6>
+								<h4 class="mt-2 mb-3">Al mejor precio</h4>
+								<p>Envío gratis a partir de 40€</p>
+							</div>
+							<div class="col-sm-5 offerimg-w3l">
+								<img src="../images/crashbandicootwarped.png" alt=""
+									class="img-fluid">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- middle section -->
+
+	<!-- footer -->
+	<footer>
+		<div class="footer-top-first">
+			<div class="container py-md-5 py-sm-4 py-3">
+				<!-- footer first section -->
+				<h2 class="footer-top-head-w3l font-weight-bold mb-2">Videojuegos
+					:</h2>
+				<p class="footer-main mb-4">Si estas buscando videojuegos,
+					consolas, perifericos, mandos, cables etc. Entonces estas en la
+					tienda adecuada. En Consoles&Games estamos a la ultima con los
+					videojuegos, consolas, pero tampoco nos olvidamos de las consolas
+					más antiguas.</p>
+				<!-- //footer first section -->
+				<!-- footer second section -->
+				<div
+					class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
+					<div class="col-md-4 offer-footer">
+						<div class="row">
+							<div class="col-4 icon-fot">
+								<i class="fas fa-dolly"></i>
+							</div>
+							<div class="col-8 text-form-footer">
+								<h3>Envío Gratis</h3>
+								<p>En pedidos superiores a 40€</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 offer-footer my-md-0 my-4">
+						<div class="row">
+							<div class="col-4 icon-fot">
+								<i class="fas fa-shipping-fast"></i>
+							</div>
+							<div class="col-8 text-form-footer">
+								<h3>Envio Rápido</h3>
+								<p>A todo el mundo</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 offer-footer">
+						<div class="row">
+							<div class="col-4 icon-fot">
+								<i class="far fa-thumbs-up"></i>
+							</div>
+							<div class="col-8 text-form-footer">
+								<h3>Los mejores</h3>
+								<p>productos</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //footer second section -->
+			</div>
+		</div>
+		<!-- footer third section -->
+		<div class="w3l-middlefooter-sec">
+			<div class="container py-md-5 py-sm-4 py-3">
+				<div class="row footer-info w3-agileits-info">
+					<!-- footer categories -->
+					<div class="col-md-3 col-sm-6 footer-grids">
+						<h3 class="text-white font-weight-bold mb-3">Listados</h3>
+						<ul>
+							<li class="mb-3"><a href="http://localhost:8080/listadoJuegos">Listado de
+									Juegos </a></li>
+							<li class="mb-3"><a href="http://localhost:8080/listadoMarcas">Listado de
+									Marcas</a></li>
+							<li class="mb-3"><a href="http://localhost:8080/listadoDesarrolladoras">Listado
+									de Desarrolladoras</a></li>
+							<li class="mb-3"><a href="http://localhost:8080/listadoConsolas">Listado de
+									Consolas</a></li>
+
+						</ul>
+					</div>
+					<!-- //footer categories -->
+					<!-- quick links -->
+					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
+						<h3 class="text-white font-weight-bold mb-3">Proximos
+							Lanzamientos</h3>
+						<ul>
+							<li class="mb-3"><a href="http://localhost:8080/proximamente">Proximos Juegos</a></li>
+						</ul>
+					</div>
+					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
+						<h3 class="text-white font-weight-bold mb-3">Nuestro contacto</h3>
+						<ul>
+							<li class="mb-3"><i class="fas fa-map-marker"></i> Avenida
+								Super Mario Bros /Zaragoza Nº34</li>
+							<li class="mb-3"><i class="fas fa-mobile"></i> 657 473 848</li>
+							<li class="mb-3"><i class="fas fa-phone"></i> 976 784 384</li>
+							<li class="mb-3"><i class="fas fa-envelope-open"></i> <a
+								href="mailto:example@mail.com"> support@consolesandgames.com</a></li>
+							<li><i class="fas fa-envelope-open"></i> <a
+								href="mailto:example@mail.com">
+									support2@consolesandgames.com</a></li>
+						</ul>
+					</div>
+					<div
+						class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
+						<!-- newsletter -->
+						<h3 class="text-white font-weight-bold mb-3">Noticias</h3>
+						<p class="mb-3">Deja tu email para suscribirte a nuestro
+							boletin de noticias!</p>
+						<form action="addnoticias.php" method="post">
+							<div class="form-group">
+								<input type="email" class="form-control" placeholder="Email"
+									name="f_email" id="f_email" required=""> <input
+									type="submit" value="Go">
+							</div>
+						</form>
+						<!-- //newsletter -->
+						<!-- social icons -->
+						<div class="footer-grids  w3l-socialmk mt-3">
+							<h3 class="text-white font-weight-bold mb-3">Siguenos en...</h3>
+							<div class="social">
+								<ul>
+									<li><a class="icon fb" href="http://facebook.com"> <i
+											class="fab fa-facebook-f"></i>
+									</a></li>
+									<li><a class="icon tw" href="http://twitter.com"> <i
+											class="fab fa-twitter"></i>
+									</a></li>
+									<li><a class="icon gp" href="http://googleplus.com"> <i
+											class="fab fa-google-plus-g"></i>
+									</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- //social icons -->
+					</div>
+				</div>
+				<!-- //quick links -->
+			</div>
+		</div>
+		<!-- //footer third section -->
+
+		<!-- footer fourth section -->
+
+		<!-- //brands -->
+		<!-- payment -->
+		<div class="sub-some child-momu mt-4">
+			<h5 class="font-weight-bold mb-3">Metodo de pago:</h5>
+			<ul>
+				<li><img src="../images/pay2.png" alt=""></li>
+				<li><img src="../images/pay5.png" alt=""></li>
+				<li><img src="../images/pay1.png" alt=""></li>
+				<li><img src="../images/pay4.png" alt=""></li>
+				<li><img src="../images/pay6.png" alt=""></li>
+				<li><img src="../images/pay3.png" alt=""></li>
+				<li><img src="../images/pay7.png" alt=""></li>
+				<li><img src="../images/pay8.png" alt=""></li>
+				<li><img src="../images/pay9.png" alt=""></li>
+			</ul>
+		</div>
+		<!-- //payment -->
+		</div>
+		</div>
+		<!-- //footer fourth section (text) -->
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->

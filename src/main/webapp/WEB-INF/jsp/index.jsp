@@ -9,6 +9,8 @@
 <body>
 <a href="insertarJuego">Añadir juego</a>
 <a href="listadoJuegos">Listado de juegos</a>
+<a href="listadoDesarrolladoras">Listado de desarrolladoras</a>
+
 
 </body>
 </html>

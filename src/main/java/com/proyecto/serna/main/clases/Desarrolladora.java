@@ -20,7 +20,7 @@ public class Desarrolladora {
 	private Integer id_desarrolladora;
 	private String nombre;
 	private String foto;
-	@OneToMany(mappedBy = "desarrolladora", cascade = CascadeType.ALL, orphanRemoval = true)		
+	@OneToMany(mappedBy = "desarrolladora", cascade = CascadeType.ALL)		
 	private List<Juego> juegos;
 
 	public Integer getId_desarrolladora() {

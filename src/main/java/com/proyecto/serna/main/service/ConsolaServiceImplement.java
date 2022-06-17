@@ -6,43 +6,45 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Desarrolladora;
+import com.proyecto.serna.main.dao.ConsolaDao;
 import com.proyecto.serna.main.dao.DesarrolladoraDao;
 
-@Service("desarrolladoraServiceimplement")
-public class DesarrolladoraServiceImplement  implements DesarrolladoraService {
+@Service("consolaServiceimplement")
+public class ConsolaServiceImplement  implements ConsolaService {
 	@Autowired
-	private DesarrolladoraDao desarrolladoraDao;
+	private ConsolaDao consolaDao;
 	@Override
 	@Transactional(readOnly = false)
-	public void insertar(Desarrolladora desarrolladora) {
+	public void insertar(Consola consola) {
 		// TODO Auto-generated method stub
-		desarrolladoraDao.save(desarrolladora);
+		consolaDao.save(consola);
 	}
 	@Transactional(readOnly = false)
 	@Override
-	public void eliminar(Integer id_desarrolladora) {
+	public void eliminar(Integer id_consola) {
 		// TODO Auto-generated method stub
-		desarrolladoraDao.delete(findById(id_desarrolladora));
+		consolaDao.delete(findById(id_consola));
 	}
 	@Transactional(readOnly = false)
 	@Override
-	public void actualizar(Desarrolladora desarrolladora) {
+	public void actualizar(Consola consola) {
 		// TODO Auto-generated method stub
-		desarrolladoraDao.save(desarrolladora);	
+		consolaDao.save(consola);	
 	}
 	@Transactional(readOnly = true)
 	@Override
-	public Desarrolladora findById(Integer id_desarrolladora) {
+	public Consola findById(Integer id_consola) {
 		// TODO Auto-generated method stub
-		return  desarrolladoraDao.findById(id_desarrolladora).orElse(null);
+		return  consolaDao.findById(id_consola).orElse(null);
 	}
 
 	@Override
 	@Transactional(readOnly = true)
-	public Collection<Desarrolladora> findAll() {
+	public Collection<Consola> findAll() {
 		// TODO Auto-generated method stub
-		return (Collection<Desarrolladora>) desarrolladoraDao.findAll();
+		return (Collection<Consola>) consolaDao.findAll();
 	}
 
 }
