@@ -824,7 +824,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 														</c:forEach>
 													</form:select>
-  
+       											<h3>Consola:</h3>
+          										<form:select id="consola" class="form-control" path="consola">
+														<c:forEach items="${listadoConsolas}" var="item">
+															<form:option value="${item.id_consola}" class="form-control">${item.nombre}</form:option>
+
+														</c:forEach>
+													</form:select>  
 
 
          											<h3>Foto:</h3>

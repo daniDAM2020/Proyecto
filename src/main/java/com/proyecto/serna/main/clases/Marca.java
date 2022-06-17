@@ -19,7 +19,7 @@ public class Marca {
 	    @Column(unique = true, nullable = false)
 		private Integer id_marca;
 		private String nombre;
-		@OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, orphanRemoval = true)		
+		@OneToMany(mappedBy = "marca", cascade = CascadeType.ALL)		
 		private List<Consola> consolas;
 		private String foto;
 		

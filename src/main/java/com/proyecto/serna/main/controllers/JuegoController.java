@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.proyecto.serna.main.clases.Juego;
+import com.proyecto.serna.main.service.ConsolaService;
 import com.proyecto.serna.main.service.DesarrolladoraService;
 import com.proyecto.serna.main.service.JuegoService;
 
@@ -26,6 +27,8 @@ public class JuegoController {
 	private JuegoService juegoService;
 	@Autowired
 	private DesarrolladoraService desarrolladoraService;
+	@Autowired 
+	private ConsolaService consolaService;
 
 
 	@GetMapping(value = "/listadoJuegos")
@@ -40,6 +43,8 @@ public class JuegoController {
 		Juego juego = new Juego();
 		map.put("juego", juego);
 		map.put("listadoDesarrolladoras", desarrolladoraService.findAll());
+		map.put("listadoConsolas", consolaService.findAll());
+
 
 		return "insertarJuego";
 	}
@@ -58,6 +63,7 @@ public class JuegoController {
 		Juego juego = juegoService.findById(id_juego);
 		map.put("juego", juego);
 		map.put("listadoDesarrolladoras", desarrolladoraService.findAll());
+		map.put("listadoConsolas", consolaService.findAll());
 
 		return "editarJuego";
 	}

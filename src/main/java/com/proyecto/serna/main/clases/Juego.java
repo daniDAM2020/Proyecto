@@ -1,6 +1,5 @@
 package com.proyecto.serna.main.clases;
 
-import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,7 +7,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -23,12 +21,17 @@ public class Juego {
 	private String nombre;
 	private Integer precio;
 
-	@ManyToMany(mappedBy = "juegos")
-	private List<Consola> consolas;
-    @ManyToOne()
+
+
+	@ManyToOne()
     @JoinColumn(name = "id_desarrolladora")
 	private Desarrolladora desarrolladora;
 	private String foto;
+	@ManyToOne()
+
+	@JoinColumn(name = "id_consola")
+	private Consola consola;	
+
 	public Integer getId_juego() {
 		return id_juego;
 	}
@@ -45,13 +48,7 @@ public class Juego {
 		this.nombre = nombre;
 	}
 
-	public List<Consola> getConsolas() {
-		return consolas;
-	}
 
-	public void setConsolas(List<Consola> consolas) {
-		this.consolas = consolas;
-	}
 
 
 
@@ -78,6 +75,15 @@ public class Juego {
 	public void setPrecio(Integer precio) {
 		this.precio = precio;
 	}
+
+	public Consola getConsola() {
+		return consola;
+	}
+
+	public void setConsola(Consola consola) {
+		this.consola = consola;
+	}
+
 
 
 

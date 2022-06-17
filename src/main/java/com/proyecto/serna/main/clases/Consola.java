@@ -5,6 +5,7 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -12,6 +13,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -27,15 +29,8 @@ public class Consola {
     @ManyToOne()
     @JoinColumn(name = "id_marca")
 	private Marca marca;
-    @ManyToMany(cascade = {
-            CascadeType.PERSIST,
-            CascadeType.MERGE
-    })
-    @JoinTable(
-            name = "consolas_juegos",
-            joinColumns = {@JoinColumn(name = "consola_id")},
-            inverseJoinColumns = {@JoinColumn(name = "juego_id")}
-    )
+	@OneToMany(mappedBy = "consola", cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Juego.class)		
+
     private List<Juego> juegos;
 
 	public Integer getId_consola() {

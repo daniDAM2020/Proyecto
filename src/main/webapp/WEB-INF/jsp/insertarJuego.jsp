@@ -820,7 +820,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<h3><form:option style="font-size: 20px" class="form-control" value="${item.id_desarrolladora}">${item.nombre}</form:option></h3>
 														</c:forEach>
 														</form:select>
-  
+        													<h3>Consola:</h3>
+           												<form:select id="consola" class="form-control" style="font-size: 20px"  required="true" path="consola">
+														<c:forEach items="${listadoConsolas}" var="item">
+
+														<h3><form:option style="font-size: 20px" class="form-control" value="${item.id_consola}">${item.nombre}</form:option></h3>
+														</c:forEach>
+														</form:select> 
 
 
          												<h3>Foto:</h3>

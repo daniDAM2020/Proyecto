@@ -811,12 +811,20 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 											<div class="men-thumb-item text-center"></div>
 											<table>
 												 
-												<form:form modelAttribute="desarrolladora" method="post">
+												<form:form modelAttribute="consola" method="post">
 	
          										<h3>Nombre:</h3>
          										<form:input class="form-control" style="font-size: 20px" type="text"  path="nombre" required="true" />
+         										<h3>Precio:</h3>
+         										<form:input class="form-control" style="font-size: 20px" type="text"  path="precio" required="true" />
 
-  
+       											<h3>Marca:</h3>
+          										<form:select id="marca" class="form-control" path="marca">
+														<c:forEach items="${listadoMarcas}" var="item">
+															<form:option value="${item.id_marca}" class="form-control">${item.nombre}</form:option>
+
+														</c:forEach>
+													</form:select>   
 
 
          											<h3>Foto:</h3>

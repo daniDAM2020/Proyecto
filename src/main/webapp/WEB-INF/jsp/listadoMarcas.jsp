@@ -789,7 +789,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
+				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Marcas</strong><br>
 				<br>
 				<br>
 
@@ -801,7 +801,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- first section -->
 							<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 								<h3 class="heading-tittle text-center font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listado
-									Videojuegos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarJuego"><input class="button2" type="submit" value="Insertar un juego" style="font-size: 16px" /></a></h3></br>
+									Marcas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarMarca"><input class="button2" type="submit" value="Insertar una Marca" style="font-size: 16px" /></a></h3></br>
 								<div class="row">
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">
@@ -810,36 +810,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 													<thead>
 														<tr>
 															<th style="font-size: 20px; text-align:right" >&nbsp;&nbsp;&nbsp;&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrolladora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
-															
+
 															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
 														</tr>
 													</thead>
 													<tbody>
 													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-														<c:forEach var="juego" items="${listaJuegos}">
+														<c:forEach var="marca" items="${listaMarcas}">
 														
 															<tr>
 															
-																<td style="font-size: 20px">${juego.nombre}</td>
-																<td style="font-size: 20px">${juego.desarrolladora.nombre}</td>
-																<td style="font-size: 20px">${juego.precio}</td>
-																<td style="font-size: 20px">${juego.consola.nombre}</td>
+																<td style="font-size: 20px">${marca.nombre}</td>
+
 																
-																<td ><img src="${juego.foto}" width="150"></td>
+																<td ><img src="${marca.foto}" width="150"></td>
 																<td>
 																	<form method="get"
-																		action="/editarJuego/${juego.id_juego}">
+																		action="/editarMarca/${marca.id_marca}">
 																		<a
-																			href="http://localhost:8080/editarJuego/${juego.id_juego}"><input class="button2"
+																			href="http://localhost:8080/editarMarca/${marca.id_marca}"><input class="button2"
 																			type="submit" value="Editar" style="font-size: 17px"></a>
 																	</form>
 																	<form method="get"
-																		action="/eliminarJuego/${juego.id_juego}">
+																		action="/eliminarMarca/${marca.id_marca}">
 																		<a
-																			href="http://localhost:8080/borrarJuego/${juego.id_juego}"><input class="button2"
+																			href="http://localhost:8080/borrarMarca/${marca.id_marca}"><input class="button2"
 																			type="submit" value="Borrar" style="font-size: 17px"></a>
 																	</form>
 																</td>

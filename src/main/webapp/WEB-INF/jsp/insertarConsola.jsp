@@ -808,16 +808,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<div class="men-pro-item simpleCart_shelfItem">
 											<div class="men-thumb-item text-center"></div>
 											<table>
-												<form:form modelAttribute="juego" style="font-size: 20px" method="POST">
+												<form:form modelAttribute="consola" style="font-size: 20px" method="POST">
         												 <h3>Nombre:</h3>
          												<form:input type="text" class="form-control" style="font-size: 20px" path="nombre" required="true" />
  		 												<h3>Precio:</h3>
          												<form:input class="form-control" type="text" style="font-size: 20px" path="precio" required="true" />
-       													<h3>Desarrolladora:</h3>
-           												<form:select id="desarrolladora" class="form-control" style="font-size: 20px"  required="true" path="desarrolladora">
-														<c:forEach items="${listadoDesarrolladoras}" var="item">
+       													<h3>Marca</h3>
+           												<form:select id="marca" class="form-control" style="font-size: 20px"  required="true" path="marca">
+														<c:forEach items="${listadoMarcas}" var="item">
 
-														<h3><form:option style="font-size: 20px" class="form-control" value="${item.id_desarrolladora}">${item.nombre}</form:option></h3>
+														<h3><form:option style="font-size: 20px" class="form-control" value="${item.id_marca}">${item.nombre}</form:option></h3>
 														</c:forEach>
 														</form:select>
   
@@ -828,7 +828,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 														<h3><input class="button2 form-control"  type="submit" value="Insertar" style="font-size: 20px" /></h3></br>
 
-														<h3><a href="listadoJuegos"><input class="button2 form-control"  type="text" value="Volver" style="font-size: 20px;text-align:center"  /></a></h3></br>
+														<h3><a href="listadoConsolas"><input class="button2 form-control"  type="text" value="Volver" style="font-size: 20px;text-align:center"  /></a></h3></br>
 
 
 														</form:form>

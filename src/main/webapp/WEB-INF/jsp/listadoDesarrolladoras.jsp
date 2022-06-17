@@ -827,8 +827,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																			href="http://localhost:8080/editarDesarrolladora/${desarrolladora.id_desarrolladora}"><input class="button2"
 																			type="submit" value="Editar" style="font-size: 17px"></a>
 																	</form>
-																</td>
-																<td>
 																	<form method="get"
 																		action="/eliminarDesarrolladora/${desarrolladora.id_desarrolladora}">
 																		<a
@@ -836,6 +834,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 																			type="submit" value="Borrar" style="font-size: 17px"></a>
 																	</form>
 																</td>
+
 															</tr>
 														</c:forEach>
 													</tbody>
