@@ -1,6 +1,8 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <html>
 <head>
 <title>Consoles and Games</title>
@@ -791,7 +793,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
 				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
 				<br>
-				<br>
+											
+												<form action="busquedaConsola" style="font-size: 20px"  method="get">
+        												 <h3>Buscar por nombre</h3></br>
+         												<input type="search" id="nombre" name="nombre" class="form-control"  style="font-size: 20px"  />  </br>
+ 								<input class="button2" type="submit" value="Buscar">
+
+
+
+														</form></br>
+
+													
 
 				<!-- //tittle heading -->
 				<div class="row">

@@ -1,6 +1,7 @@
 package com.proyecto.serna.main.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -8,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Desarrolladora;
+import com.proyecto.serna.main.clases.Juego;
 import com.proyecto.serna.main.dao.ConsolaDao;
 import com.proyecto.serna.main.dao.DesarrolladoraDao;
 
@@ -46,5 +48,12 @@ public class ConsolaServiceImplement  implements ConsolaService {
 		// TODO Auto-generated method stub
 		return (Collection<Consola>) consolaDao.findAll();
 	}
+	@Override
+	public Collection<Consola> findByNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return (Collection<Consola>) consolaDao.findByNombre(nombre);
+	}
+
+
 
 }

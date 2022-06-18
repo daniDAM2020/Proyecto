@@ -5,9 +5,12 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Juego;
@@ -68,5 +71,10 @@ public class ConsolaController {
 	public String eliminar(@PathVariable Integer id_consola) {
 		consolaService.eliminar(id_consola);
 		return "redirect:/listadoConsolas";
+	}
+	@GetMapping(value = "/busquedaConsola")
+	public String buscarNombre(@RequestParam String nombre, Model model) {
+		model.addAttribute("listadoBusqueda", consolaService.findByNombre(nombre));
+		return "busquedaConsola";
 	}
 }

@@ -626,16 +626,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">
 											<div class="men-thumb-item text-center"></div>
+											<h1>Usuario o contraseña incorrectos. <a href="/">Vuelve a intentarlo</a></h1>
 
-												<form:form action="loginExitoso" method="post" modelAttribute="usuario">
-													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Usuario: &nbsp;&nbsp;
-														<form:input type="text"  path="usuario"   required="true" ></form:input>&nbsp;&nbsp;&nbsp;
-													Contraseña: &nbsp;&nbsp;
-														<form:input type="password"  path="contrasena"  required="true" ></form:input>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-														<input type="submit" class="button2">
-														</form:form>
-
-												
 
 										</div>
 									</div>
