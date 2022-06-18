@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Marca;
 import com.proyecto.serna.main.dao.MarcaDao;
 
@@ -43,6 +44,11 @@ public class MarcaServiceImplement implements MarcaService {
 	public Collection<Marca> findAll() {
 		// TODO Auto-generated method stub
 		return (Collection<Marca>) marcaDao.findAll();
+	}
+	@Override
+	public Collection<Marca> findByNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return (Collection<Marca>) marcaDao.findByNombre(nombre);
 	}
 
 }

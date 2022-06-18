@@ -1,6 +1,8 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <html>
 <head>
 <title>Consoles and Games</title>
@@ -789,17 +791,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
+				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Listado juegos</strong><br>
 				<br>
-				<br>
-												<form action="busquedaDesarrolladora" style="font-size: 20px"  method="get">
-        												 <h3>Buscar por nombre</h3></br>
-         												<input type="search" id="nombre" name="nombre" class="form-control"  style="font-size: 20px"  />  </br>
- 								<input class="button2" type="submit" value="Buscar">
+											
 
 
+													
 
-														</form></br>
 				<!-- //tittle heading -->
 				<div class="row">
 					<!-- product left -->
@@ -808,36 +806,45 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- first section -->
 							<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 								<h3 class="heading-tittle text-center font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listado
-									Desarrolladoras&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarDesarrolladora"><input class="button2" type="submit" value="Insertar una desarrolladora" style="font-size: 16px" /></a></h3></br>
+									Marcas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarMarca"><input class="button2" type="submit" value="Insertar una marca" style="font-size: 16px" /></a></h3></br>
 								<div class="row">
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">
 											<div class="men-thumb-item text-center"></div>
-												<table>
+																								<table>
 													<thead>
 														<tr>
-															<th style="font-size: 20px; text-align:right" >&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
-															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+															<th style="font-size: 20px; text-align:right" >&nbsp;&nbsp;&nbsp;&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
+															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Desarrolladora&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </th>
+															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Consola&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
+															
+															<th style="font-size: 20px" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Foto&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </th>
 														</tr>
 													</thead>
 													<tbody>
-													
-														<c:forEach var="desarrolladora" items="${listaDesarrolladoras}">
+													&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+														<c:forEach var="juego" items="${listadoBusqueda}">
+														
 															<tr>
 															
-																<td style="font-size: 20px">${desarrolladora.nombre}</td>
-																<td ><img src="${desarrolladora.foto}" width="150"></td>
+																<td style="font-size: 20px">${juego.nombre}</td>
+																<td style="font-size: 20px">${juego.desarrolladora.nombre}</td>
+																<td style="font-size: 20px">${juego.precio}</td>
+																<td style="font-size: 20px">${juego.consola.nombre}</td>
+																
+																<td ><img src="${juego.foto}" width="150"></td>
 																<td>
 																	<form method="get"
-																		action="/editarDesarrolladora/${desarrolladora.id_desarrolladora}">
+																		action="/editarJuego/${juego.id_juego}">
 																		<a
-																			href="http://localhost:8080/editarDesarrolladora/${desarrolladora.id_desarrolladora}"><input class="button2"
+																			href="http://localhost:8080/editarJuego/${juego.id_juego}"><input class="button2"
 																			type="submit" value="Editar" style="font-size: 17px"></a>
 																	</form>
 																	<form method="get"
-																		action="/eliminarDesarrolladora/${desarrolladora.id_desarrolladora}">
+																		action="/eliminarJuego/${juego.id_juego}">
 																		<a
-																			href="http://localhost:8080/eliminarDesarrolladora/${desarrolladora.id_desarrolladora}"><input class="button2"
+																			href="http://localhost:8080/borrarJuego/${juego.id_juego}"><input class="button2"
 																			type="submit" value="Borrar" style="font-size: 17px"></a>
 																	</form>
 																</td>
@@ -845,8 +852,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 															</tr>
 														</c:forEach>
 													</tbody>
-												</table>
-
+												</table>								
+																	<a href="listadoJuegos"><input class="button2"
+																			type="button" value="Volver" style="font-size: 17px"></a>
 
 											</div>
 										</div>

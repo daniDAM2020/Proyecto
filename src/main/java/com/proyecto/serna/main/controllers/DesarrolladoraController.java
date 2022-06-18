@@ -5,9 +5,11 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proyecto.serna.main.clases.Desarrolladora;
 import com.proyecto.serna.main.clases.Juego;
@@ -61,6 +63,11 @@ public class DesarrolladoraController {
 	public String eliminar(@PathVariable Integer id_desarrolladora) {
 		desarrolladoraService.eliminar(id_desarrolladora);
 		return "redirect:/listadoDesarrolladoras";
+	}
+	@GetMapping(value = "/busquedaDesarrolladora")
+	public String buscarNombre(@RequestParam String nombre, Model model) {
+		model.addAttribute("listadoBusqueda", desarrolladoraService.findByNombre(nombre));
+		return "busquedaDesarrolladora";
 	}
 
 }

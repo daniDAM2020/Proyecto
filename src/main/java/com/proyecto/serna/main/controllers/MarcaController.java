@@ -5,9 +5,11 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.proyecto.serna.main.clases.Marca;
 import com.proyecto.serna.main.service.MarcaService;
@@ -60,6 +62,11 @@ public class MarcaController {
 	public String eliminar(@PathVariable Integer id_marca) {
 		marcaService.eliminar(id_marca);
 		return "redirect:/listadoMarcas";
+	}
+	@GetMapping(value = "/busquedaMarca")
+	public String buscarNombre(@RequestParam String nombre, Model model) {
+		model.addAttribute("listadoBusqueda", marcaService.findByNombre(nombre));
+		return "busquedaMarca";
 	}
 
 

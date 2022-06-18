@@ -791,7 +791,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
+				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Listado Consolas</strong><br>
 				<br>
 											
 

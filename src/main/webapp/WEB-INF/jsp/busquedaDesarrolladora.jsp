@@ -1,6 +1,8 @@
 <%@ page language="java" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <html>
 <head>
 <title>Consoles and Games</title>
@@ -789,17 +791,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;PAGINA PRINCIPAL</strong><br>
+				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Listado desarrolladoras</strong><br>
 				<br>
-				<br>
-												<form action="busquedaDesarrolladora" style="font-size: 20px"  method="get">
-        												 <h3>Buscar por nombre</h3></br>
-         												<input type="search" id="nombre" name="nombre" class="form-control"  style="font-size: 20px"  />  </br>
- 								<input class="button2" type="submit" value="Buscar">
+											
 
 
+													
 
-														</form></br>
 				<!-- //tittle heading -->
 				<div class="row">
 					<!-- product left -->
@@ -813,7 +811,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">
 											<div class="men-thumb-item text-center"></div>
-												<table>
+			<table>
 													<thead>
 														<tr>
 															<th style="font-size: 20px; text-align:right" >&nbsp;Nombre&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   </th>
@@ -822,7 +820,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 													</thead>
 													<tbody>
 													
-														<c:forEach var="desarrolladora" items="${listaDesarrolladoras}">
+														<c:forEach var="desarrolladora" items="${listadoBusqueda}">
 															<tr>
 															
 																<td style="font-size: 20px">${desarrolladora.nombre}</td>
@@ -846,6 +844,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														</c:forEach>
 													</tbody>
 												</table>
+																		<a href="listadoDesarrolladoras"><input class="button2"
+																			type="button" value="Volver" style="font-size: 17px"></a>
 
 
 											</div>

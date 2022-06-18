@@ -792,7 +792,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Marcas</strong><br>
 				<br>
 				<br>
+												<form action="busquedaMarca" style="font-size: 20px"  method="get">
+        												 <h3>Buscar por nombre</h3></br>
+         												<input type="search" id="nombre" name="nombre" class="form-control"  style="font-size: 20px"  />  </br>
+ 								<input class="button2" type="submit" value="Buscar">
 
+
+
+														</form></br>
 				<!-- //tittle heading -->
 				<div class="row">
 					<!-- product left -->

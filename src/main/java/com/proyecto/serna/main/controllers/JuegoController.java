@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.proyecto.serna.main.clases.Juego;
@@ -77,6 +78,10 @@ public class JuegoController {
 		juegoService.eliminar(id_juego);
 		return "redirect:/listadoJuegos";
 	}
-
+	@GetMapping(value = "/busquedaJuego")
+	public String buscarNombre(@RequestParam String nombre, Model model) {
+		model.addAttribute("listadoBusqueda", juegoService.findByNombre(nombre));
+		return "busquedaJuego";
+	}
 
 }

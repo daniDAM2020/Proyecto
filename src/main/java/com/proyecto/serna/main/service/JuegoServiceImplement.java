@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.proyecto.serna.main.clases.Desarrolladora;
 import com.proyecto.serna.main.clases.Juego;
 import com.proyecto.serna.main.dao.JuegoDao;
 
@@ -44,6 +45,11 @@ public class JuegoServiceImplement implements JuegoService {
 	public Collection<Juego> findAll() {
 		// TODO Auto-generated method stub
 		return (Collection<Juego>) juegoDao.findAll();
+	}
+	@Override
+	public Collection<Juego> findByNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return (Collection<Juego>) juegoDao.findByNombre(nombre);
 	}
 
 }

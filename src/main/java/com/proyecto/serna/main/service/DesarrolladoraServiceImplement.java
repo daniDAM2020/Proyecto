@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Desarrolladora;
 import com.proyecto.serna.main.dao.DesarrolladoraDao;
 
@@ -43,6 +44,11 @@ public class DesarrolladoraServiceImplement  implements DesarrolladoraService {
 	public Collection<Desarrolladora> findAll() {
 		// TODO Auto-generated method stub
 		return (Collection<Desarrolladora>) desarrolladoraDao.findAll();
+	}
+	@Override
+	public Collection<Desarrolladora> findByNombre(String nombre) {
+		// TODO Auto-generated method stub
+		return (Collection<Desarrolladora>) desarrolladoraDao.findByNombre(nombre);
 	}
 
 }
