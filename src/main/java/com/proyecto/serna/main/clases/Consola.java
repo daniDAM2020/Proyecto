@@ -16,6 +16,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "consolas")
 public class Consola {
@@ -29,7 +31,9 @@ public class Consola {
     @ManyToOne()
     @JoinColumn(name = "id_marca")
 	private Marca marca;
-	@OneToMany(mappedBy = "consola", cascade = CascadeType.ALL,fetch = FetchType.EAGER, targetEntity = Juego.class)		
+    @JsonIgnore
+
+	@OneToMany(mappedBy = "consola", cascade = CascadeType.ALL,fetch = FetchType.LAZY, targetEntity = Juego.class)		
 
     private List<Juego> juegos;
 

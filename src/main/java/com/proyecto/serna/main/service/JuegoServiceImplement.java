@@ -1,7 +1,7 @@
 package com.proyecto.serna.main.service;
 
 import java.util.Collection;
-
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -42,14 +42,14 @@ public class JuegoServiceImplement implements JuegoService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Collection<Juego> findAll() {
+	public List<Juego> findAll() {
 		// TODO Auto-generated method stub
-		return (Collection<Juego>) juegoDao.findAll();
+		return (List<Juego>) juegoDao.findAll();
 	}
 	@Override
-	public Collection<Juego> findByNombre(String nombre) {
+	public List<Juego> findByNombre(String nombre) {
 		// TODO Auto-generated method stub
-		return (Collection<Juego>) juegoDao.findByNombre(nombre);
+		return (List<Juego>) juegoDao.findByNombre(nombre);
 	}
 
 }

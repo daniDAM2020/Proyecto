@@ -1,6 +1,7 @@
 package com.proyecto.serna.main.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,14 +42,14 @@ public class MarcaServiceImplement implements MarcaService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Collection<Marca> findAll() {
+	public List<Marca> findAll() {
 		// TODO Auto-generated method stub
-		return (Collection<Marca>) marcaDao.findAll();
+		return (List<Marca>) marcaDao.findAll();
 	}
 	@Override
-	public Collection<Marca> findByNombre(String nombre) {
+	public List<Marca> findByNombre(String nombre) {
 		// TODO Auto-generated method stub
-		return (Collection<Marca>) marcaDao.findByNombre(nombre);
+		return (List<Marca>) marcaDao.findByNombre(nombre);
 	}
 
 }

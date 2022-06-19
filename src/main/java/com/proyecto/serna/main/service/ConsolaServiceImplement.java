@@ -44,14 +44,14 @@ public class ConsolaServiceImplement  implements ConsolaService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Collection<Consola> findAll() {
+	public List<Consola> findAll() {
 		// TODO Auto-generated method stub
-		return (Collection<Consola>) consolaDao.findAll();
+		return (List<Consola>) consolaDao.findAll();
 	}
 	@Override
-	public Collection<Consola> findByNombre(String nombre) {
+	public List<Consola> findByNombre(String nombre) {
 		// TODO Auto-generated method stub
-		return (Collection<Consola>) consolaDao.findByNombre(nombre);
+		return (List<Consola>) consolaDao.findByNombre(nombre);
 	}
 
 

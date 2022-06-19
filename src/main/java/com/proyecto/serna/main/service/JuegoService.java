@@ -1,6 +1,7 @@
 package com.proyecto.serna.main.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import com.proyecto.serna.main.clases.Consola;
 import com.proyecto.serna.main.clases.Juego;
@@ -10,9 +11,9 @@ public abstract void insertar(Juego juego);
 public abstract void eliminar(Integer id_juego);
 public abstract void actualizar(Juego juego);
 
-public abstract Collection<Juego> findByNombre(String nombre);
+public abstract List<Juego> findByNombre(String nombre);
 
 public abstract Juego findById(Integer id_juego);
-public abstract Collection<Juego> findAll();
+public abstract List<Juego> findAll();
 
 }

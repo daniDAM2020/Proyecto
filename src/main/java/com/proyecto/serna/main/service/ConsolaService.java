@@ -12,9 +12,9 @@ public interface ConsolaService {
 		public abstract void eliminar(Integer id_consola);
 		public abstract void actualizar(Consola consola);
 
-		public abstract Collection<Consola> findByNombre(String nombre);
+		public abstract List<Consola> findByNombre(String nombre);
 		public abstract Consola findById(Integer id_consola);
-		public abstract Collection<Consola> findAll();
+		public abstract List<Consola> findAll();
 
 		
 }

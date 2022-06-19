@@ -5,11 +5,14 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
 @Table(name = "marcas")
@@ -19,7 +22,9 @@ public class Marca {
 	    @Column(unique = true, nullable = false)
 		private Integer id_marca;
 		private String nombre;
-		@OneToMany(mappedBy = "marca", cascade = CascadeType.ALL)		
+		@JsonIgnore
+
+		@OneToMany(mappedBy = "marca", cascade = CascadeType.ALL, fetch = FetchType.LAZY)		
 		private List<Consola> consolas;
 		private String foto;
 		

@@ -1,6 +1,7 @@
 package com.proyecto.serna.main.service;
 
 import java.util.Collection;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -41,14 +42,14 @@ public class DesarrolladoraServiceImplement  implements DesarrolladoraService {
 
 	@Override
 	@Transactional(readOnly = true)
-	public Collection<Desarrolladora> findAll() {
+	public List<Desarrolladora> findAll() {
 		// TODO Auto-generated method stub
-		return (Collection<Desarrolladora>) desarrolladoraDao.findAll();
+		return (List<Desarrolladora>) desarrolladoraDao.findAll();
 	}
 	@Override
-	public Collection<Desarrolladora> findByNombre(String nombre) {
+	public List<Desarrolladora> findByNombre(String nombre) {
 		// TODO Auto-generated method stub
-		return (Collection<Desarrolladora>) desarrolladoraDao.findByNombre(nombre);
+		return (List<Desarrolladora>) desarrolladoraDao.findByNombre(nombre);
 	}
 
 }
