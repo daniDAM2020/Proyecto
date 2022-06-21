@@ -792,7 +792,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
 				<strong class="paginaprincipal">&nbsp;&nbsp;&nbsp;&nbsp;Insertar
-					Videojuegos</strong><br> <br> <br>
+					Consolas</strong><br> <br> <br>
 
 				<!-- //tittle heading -->
 				<div class="row">

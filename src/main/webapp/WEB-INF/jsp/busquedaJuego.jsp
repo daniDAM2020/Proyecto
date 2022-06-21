@@ -806,7 +806,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<!-- first section -->
 							<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
 								<h3 class="heading-tittle text-center font-italic">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listado
-									Marcas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarMarca"><input class="button2" type="submit" value="Insertar una marca" style="font-size: 16px" /></a></h3></br>
+									Juegos&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="insertarJuego"><input class="button2" type="submit" value="Insertar una juego" style="font-size: 16px" /></a></h3></br>
 								<div class="row">
 									<div class="col-md-12 product-men pt-1">
 										<div class="men-pro-item simpleCart_shelfItem">

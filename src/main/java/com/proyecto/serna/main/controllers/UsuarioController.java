@@ -24,7 +24,7 @@ public String login(Model model) {
 public String validarUsuario(@ModelAttribute Usuario usuario, Model model) {
 	
 	Usuario lusuario = usuarioService.findByName(usuario.getUsuario());
-	if (lusuario != null && usuario.getContrasena().equals(lusuario.getContrasena())){
+	if (lusuario != null && usuario.getContrasena() == lusuario.getContrasena()){
 		model.addAttribute("message", "Welcome " + lusuario.getUsuario());
 		return "redireccion";
 	} else {

@@ -565,7 +565,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<!-- logo -->
 				<div class="col-md-3 logo_agile">
 					<h1 class="text-center">
-						<a href="listadoJuegos" class="font-weight-bold font-italic">
+						<a href="/" class="font-weight-bold font-italic">
 							<img src="images/logo2.png" alt=" " class="img-fluid">Tu
 							tienda de confianza
 						</a>
@@ -577,7 +577,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="row">
 						<!-- search -->
 						<div align="center" class="col-10 agileits_search">
-							<a href="listadoJuegos"><img width="300px" height="150px"
+							<a href="/"><img width="300px" height="150px"
 								src="./images/logo.png"></img></a>
 						</div>
 						<!-- //search -->
@@ -763,13 +763,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<div class="col-md-3 col-sm-6 footer-grids">
 						<h3 class="text-white font-weight-bold mb-3">Listados</h3>
 						<ul>
-							<li class="mb-3"><a href="listadoJuegos">Listado de
+							<li class="mb-3"><a href="/">Listado de
 									Juegos </a></li>
-							<li class="mb-3"><a href="listadoMarcas">Listado de
+							<li class="mb-3"><a href="/">Listado de
 									Marcas</a></li>
-							<li class="mb-3"><a href="listadoDesarrolladoras">Listado
+							<li class="mb-3"><a href="/">Listado
 									de Desarrolladoras</a></li>
-							<li class="mb-3"><a href="listadoConsolas">Listado de
+							<li class="mb-3"><a href="/">Listado de
 									Consolas</a></li>
 
 						</ul>
@@ -780,7 +780,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h3 class="text-white font-weight-bold mb-3">Proximos
 							Lanzamientos</h3>
 						<ul>
-							<li class="mb-3"><a href="proximamente">Proximos Juegos</a></li>
+							<li class="mb-3"><a href="/">Proximos Juegos</a></li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
